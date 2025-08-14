@@ -3,7 +3,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
-import { join } from 'path';
 
 export default defineConfig(() => ({
   root: __dirname,
@@ -22,7 +21,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: join(__dirname, '../../dist/apps/admin-console'), 
+    outDir: '../../dist/apps/admin-console', 
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {

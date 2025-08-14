@@ -21,7 +21,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: '../dist/shop-dashboard',
+    outDir: '../../dist/shop-dashboard',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
