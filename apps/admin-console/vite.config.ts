@@ -21,7 +21,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: '../dist/admin-console',
+    outDir: '../../dist/apps/admin-console',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
