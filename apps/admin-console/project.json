@@ -1,10 +1,7 @@
 {
   "name": "admin-console",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "admin-console/src",
   "projectType": "application",
-  "tags": [],
-  "// targets": "to see all targets run: nx show project admin-console --web",
+  "sourceRoot": "apps/admin-console/src",
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
@@ -17,7 +14,7 @@
       "executor": "@nx/vite:dev-server",
       "options": {
         "buildTarget": "admin-console:build",
-        "port": 4400
+        "port": 4201
       }
     }
   }
