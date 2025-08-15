@@ -1,0 +1,8 @@
+{
+  "name": "shop-dashboard", 
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "vercel-build": "cd ../.. && nx build shop-dashboard"
+  }
+}

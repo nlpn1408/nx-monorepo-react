@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:shop": "nx serve shop-dashboard"
+    "dev:shop": "nx serve shop-dashboard",
+    "build:admin": "nx build admin-console",
+    "build:landing": "nx build landing-page", 
+    "build:shop": "nx build shop-dashboard",
+    "build:all": "nx run-many -t build -p admin-console,landing-page,shop-dashboard",
+    "vercel-build": "nx build admin-console && nx build landing-page && nx build shop-dashboard"
   },
   "private": true,
   "dependencies": {
