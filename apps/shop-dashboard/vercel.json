@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd ../.. && npx nx build shop-dashboard",
+  "outputDirectory": "../../dist/apps/shop-dashboard",
+  "installCommand": "cd ../.. && npm install",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

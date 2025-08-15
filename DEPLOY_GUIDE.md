@@ -96,16 +96,32 @@ git push origin main
 - Build Command: `npm run vercel-build`
 - Output Directory: `dist`
 
-### **Phương án 3: Monorepo Single Deploy**
+### **Phương án 3: Vercel CLI với Root Directory**
 
-Nếu muốn deploy tất cả trong 1 project:
+Phương án này deploy từng app riêng biệt nhưng dùng Vercel CLI:
 
-1. Deploy root project
-2. Vercel sẽ sử dụng `vercel.json` config
-3. Routes sẽ được handle theo cấu hình:
-   - `/admin/*` → Admin Console
-   - `/shop/*` → Shop Dashboard
-   - `/*` → Landing Page (default)
+#### **Deploy Admin Console:**
+```bash
+cd apps/admin-console
+vercel --prod
+```
+
+#### **Deploy Landing Page:**
+```bash
+cd apps/landing-page  
+vercel --prod
+```
+
+#### **Deploy Shop Dashboard:**
+```bash
+cd apps/shop-dashboard
+vercel --prod
+```
+
+**Mỗi app có file `vercel.json` riêng với cấu hình:**
+- Build command: `cd ../.. && npx nx build <app-name>`
+- Output directory: `../../dist/apps/<app-name>`
+- Install command: `cd ../.. && npm install`
 
 ## 🔧 Environment Variables
 
